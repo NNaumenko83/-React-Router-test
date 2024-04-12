@@ -5,9 +5,9 @@ import { getProducts } from "../../FakeAPI";
 const Products = () => {
   const products = getProducts();
   const [searchParams, setSearchParams] = useSearchParams();
+  console.log("searchParams:", searchParams);
 
   const productName = searchParams.get("name") ?? "";
-  console.log(productName);
 
   const handleChange = (e) => {
     const name = e.target.value;
